@@ -35,8 +35,6 @@ namespace SlideShareDownloader
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            ///còn cái kiểm tra thư mục có tồn tại hay không thì nên kiểm tra ngay trước khi lưu file nhỉ
-            //thêm cái nữa là tạo 1 cái progressbar để hiện tiến trình tải cái, đơn vị tính bằng số lượng ảnh lấy được
             //1. kiểm tra có phải link của slideshare.net hay không; 
             if(!CheckLink())
             {
@@ -127,8 +125,6 @@ namespace SlideShareDownloader
         {
             return rexLnk.Match(data.Value).Value;
         }
-
-        
 
         Regex rexName = new Regex("[1-9][0-9]*-[1-9][0-9]{2,3}.jpg$");
 
